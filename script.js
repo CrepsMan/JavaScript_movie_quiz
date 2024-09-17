@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     function toggleFullscreen() {
-        var imgs = document.getElementsByClassName('image');
+        let imgs = document.getElementsByClassName('image');
         
         if (imgs.length > 0) {
             for (let i = 0; i < imgs.length; i++) {
