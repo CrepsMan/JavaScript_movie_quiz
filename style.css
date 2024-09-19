@@ -1,85 +1,98 @@
 body {
-    position: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
 }
 
-#inceptionImage {
+.question {
+    font-size: xx-large;
+}
+
+.image {
     width: 30%;
 }
 
-#harrypotterImage {
-    width: 30%;
+nav {
+    background-color: #333;
+    color: white;
+    padding: 0.3%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-#godfatherImage {
-    width: 30%;
+nav h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-#nemoImage {
-    width: 30%;
+#quiz-container {
+    margin-top: 150px;
+    text-align: center;
 }
 
-#wonderwomenImage {
-    width: 30%;
+.question {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#starwarsImage {
-    width: 30%;
+.question.active {
+    display: block;
+    opacity: 1;
 }
 
-#titanicImage {
-    width: 30%;
+button {
+    margin-top: 10px;
 }
 
-#ironmanImage {
-    width: 30%;
+#nextBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: not-allowed;
 }
 
-#sparrowImage {
-    width: 30%;
+#nextBtn:enabled {
+    cursor: pointer;
+    background-color: #28a745;
 }
 
-#lordImage {
-    width: 30%;
+#progress-wrapper {
+    text-align: center;
+    margin-top: 20px;
 }
 
-
-
-#Q1 {
-    visibility: visible;
+#question-tracker {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
 }
 
-#Q2 {
-    visibility: visible;
+#progress-bar-container {
+    width: 60%;
+    height: 20px;
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-#Q3 {
-    visibility: visible;
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    border-radius: 10px;
+    transition: width 0.5s;
 }
 
-#Q4 {
-    visibility: visible;
-}
-
-#Q5 {
-    visibility: visible;
-}
-
-#Q6 {
-    visibility: visible;
-}
-
-#Q7 {
-    visibility: visible;
-}
-
-#Q8 {
-    visibility: visible;
-}
-
-#Q9 {
-    visibility: visible;
-}
-
-#Q10 {
-    visibility: visible;
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
