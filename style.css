@@ -77,20 +77,26 @@ button {
 }
 
 #progress-bar-container {
-    width: 60%;
+    width: 50%; /* Adjust to make it smaller */
+    margin: 0 auto; /* Centers the progress bar */
+    background-color: #ddd;
     height: 20px;
-    background-color: #e0e0e0;
-    margin: 0 auto;
     border-radius: 10px;
+    position: relative;
 }
 
 #progress-bar {
     height: 100%;
-    width: 0%;
+    width: 0;
     background-color: green;
     border-radius: 10px;
-    transition: width 0.5s;
 }
+
+#questionCounter {
+    text-align: center;
+    margin: 10px 0;
+}
+
 
 button[disabled] {
     opacity: 0.6;
