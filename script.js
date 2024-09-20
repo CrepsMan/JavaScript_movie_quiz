@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentQuestionIndex < questions.length) {
             // Show the next question and update the question number
             questions[currentQuestionIndex].classList.add("active");
-            questionIndicator.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+            questionCounter.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
             nextBtn.disabled = true;
 
             // Clear the input field and focus on it
