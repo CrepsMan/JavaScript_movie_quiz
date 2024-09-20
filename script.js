@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const correctAnswers = {
         //core answers
-        Q1: "Dumbledoor",
+        Q1: "Dumbledore",
         Q2: "Christopher Nolan",
         Q3: "Michael Corleone",
-        Q4: "Nemo",
+        Q4: "Finding Nemo",
         Q5: "Gal Gadot",
         Q6: "Star Wars",
         Q7: "Titanic",
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateProgressBar(isCorrect) {
         const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
         if (isCorrect) {
-            progressBar.style.width = `${progress}%`;
+            progressBar.style.width = `${score * 10}%`;
         }
     }
 
