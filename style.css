@@ -103,6 +103,9 @@ button[disabled] {
     cursor: not-allowed;
 }
 
+#restart {
+    display: none;
+}
 #results {
-    font-size: xx-large;
+    visibility: hidden;
 }

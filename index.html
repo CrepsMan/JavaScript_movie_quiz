@@ -12,7 +12,7 @@
         <form id="Q1" class="question active">
             <p>What is the name of this character?</p>
             <img id="harrypotterImage" class="image" src="https://getwallpapers.com/wallpaper/full/6/8/9/714289-albus-dumbledore-wallpapers-1920x1080-phone.jpg" alt="Image of a old man from the movies harrypotter"><br/>
-            <label for="harrypotterInput">Enter a a name:</label>
+            <label for="harrypotterInput">Enter a character's name:</label>
             <input type="text" id="harrypotterInput" required>
             <button type="submit">Submit</button>
         </form>
@@ -113,7 +113,10 @@
         </div>
     </div> 
     
-    <div id="results"></div>
+    <div id="results" style="visibility: hidden;">
+        <p id="resultsMessage"></p>
+        <button type="button" id="restart" style="display: none;">Restart</button>
+    </div>
     
     <script src="script.js"></script>
 </body>

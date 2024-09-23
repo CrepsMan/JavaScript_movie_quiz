@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const correctAnswers = {
-        //core answers
         Q1: "Dumbledore",
         Q2: "Christopher Nolan",
         Q3: "Michael Corleone",
@@ -8,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         Q5: "Gal Gadot",
         Q6: "Star Wars",
         Q7: "Titanic",
-        Q8: "Iron man",
-        Q9: "pirates of the caribbean",
+        Q8: "Tony Stark",
+        Q9: "Pirates of the Caribbean",
         Q10: "Lord of the Rings"
     };
 
@@ -19,9 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const questions = document.querySelectorAll(".question");
     const nextBtn = document.getElementById("nextBtn");
-    const scoreDisplay = document.getElementById("score");
     const progressBar = document.getElementById("progress-bar");
     const questionCounter = document.getElementById("questionCounter");
+    const resultsDiv = document.getElementById("results");
+    const restartBtn = document.getElementById("restart");
+    const resultsMessage = document.getElementById("resultsMessage");
+
+    // Hide restart button initially
+    restartBtn.style.display = "none";
+    resultsDiv.style.visibility = "hidden";  // Hide the results initially
 
     questions[currentQuestionIndex].classList.add("active");
     questionCounter.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
@@ -75,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    restartBtn.addEventListener("click", restartQuiz);
+
     function updateProgressBar(isCorrect) {
         const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
         if (isCorrect) {
@@ -83,8 +90,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displayResults() {
-        const resultsDiv = document.getElementById("results");
-        resultsDiv.textContent = `Quiz Completed! Your score: ${score}/${totalQuestions}`;
-        scoreDisplay.textContent = `Your score: ${score}`;
+        resultsMessage.textContent = `Quiz Completed! Your score: ${score}/${totalQuestions}`;
+        resultsDiv.style.visibility = "visible";
+
+        // Show restart button
+        restartBtn.style.display = "block";
     }
+
+    function restartQuiz() {//resets/restarts quiz
+
+        currentQuestionIndex = 0;
+        score = 0;
+
+        resultsDiv.style.visibility = "hidden";
+        restartBtn.style.display = "none";
+        nextBtn.style.display = "block";
+
+        progressBar.style.width = '0%';
+
+        questions.forEach((form) => {
+            form.querySelector("input[type=text]").value = "";
+            form.querySelector('button[type="submit"]').disabled = false;
+            form.classList.remove("active"); 
+        });
+
+        questions[0].classList.add("active");
+        questionCounter.textContent = `Question 1 of ${totalQuestions}`;
+        nextBtn.disabled = true;
+    }
+    
 });
