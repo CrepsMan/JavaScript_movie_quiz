@@ -1,9 +1,28 @@
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: gray;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #bbb8b8;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .question {
@@ -12,10 +31,14 @@ body {
 
 .image {
     width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 nav {
-    background-color: #333;
+    background-color: #13154d;
     color: white;
     padding: 0.3%;
     text-align: center;
@@ -26,7 +49,8 @@ nav {
 }
 
 nav h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: #b3abab;
     margin-bottom: 20px;
 }
 
@@ -66,8 +90,10 @@ button {
 }
 
 #progress-wrapper {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 #question-tracker {
@@ -77,24 +103,24 @@ button {
 }
 
 #progress-bar-container {
-    width: 50%; /* Adjust to make it smaller */
-    margin: 0 auto; /* Centers the progress bar */
+    width: 100%;
     background-color: #ddd;
-    height: 20px;
-    border-radius: 10px;
-    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
 }
 
 #progress-bar {
     height: 100%;
     width: 0;
     background-color: green;
-    border-radius: 10px;
 }
 
 #questionCounter {
-    text-align: center;
-    margin: 10px 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 
@@ -103,9 +129,34 @@ button[disabled] {
     cursor: not-allowed;
 }
 
+#results {
+    text-align: center;
+}
+
+#resultsMessage {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 #restart {
     display: none;
+    font-size: 1rem;
+    text-align: center;
 }
-#results {
-    visibility: hidden;
+
+.btn-primary {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
 }
