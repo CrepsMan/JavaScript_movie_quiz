@@ -1,123 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Quiz</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Quiz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav><h1>Film Quiz</h1></nav>
-    <div id="quiz-container">
-        <form id="Q1" class="question active">
-            <p>What is the name of this character?</p>
-            <img id="harrypotterImage" class="image" src="https://getwallpapers.com/wallpaper/full/6/8/9/714289-albus-dumbledore-wallpapers-1920x1080-phone.jpg" alt="Image of a old man from the movies harrypotter"><br/>
-            <label for="harrypotterInput">Enter a character's name:</label>
-            <input type="text" id="harrypotterInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q2" class="question">
-            <p>Who directed the movie "Inception"?</p>
-            <img id="inceptionImage" class="image"
-                src="https://image.tmdb.org/t/p/original/rWDkbJlIyqN8KcqXajh9sZMwGzo.jpg"
-                alt="Image of Inception"/>
-                <br/>
-            <label for="inceptionInput">Enter a director's name:</label>
-            <input type="text" id="inceptionInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q3" class="question">
-            <p>Who was the main character in the movie "The Godfather"?</p>
-            <img id="godfatherImage" class="image"
-                src="https://4kwallpapers.com/images/wallpapers/the-godfather-movie-1920x1080-13940.jpg"
-                alt="Image of The Godfather"/>
-                <br/>
-            <label for="godfatherInput">Enter a characters name:</label>
-            <input type="text" id="godfatherInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q4" class="question">
-            <p>What is the name of this famous animated movie?</p>
-            <img id="nemoImage" class="image" src="https://th.bing.com/th/id/R.bf49df76ec9662cc2a6aa959e7061cbe?rik=p90wzsPWkiTX5g&pid=ImgRaw&r=0" alt="Image of Nemo"><br/>
-            <label for="nemoInput">Enter a movie title:</label>
-            <input type="text" id="nemoInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q5" class="question">
-            <p>Who was the actor of wonder women?</p>
-            <img id="wonderwomenImage" class="image"
-                src="https://wallpapercave.com/wp/wp2670461.jpg" alt="Image of wonder women in red colorful smoke"/>
-                <br/>
-            <label for="wonderwomenInput">Enter an actor's name:</label>
-            <input type="text" id="wonderwomenInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q6" class="question">
-            <p>What movie series is this famous spaceship from?</p>
-            <img id="starwarsImage" class="image"
-                src="https://wallpaperaccess.com/full/1183714.jpg" alt="Image of a spaceship from a known movie"/>
-                <br/>
-            <label for="starwarsInput">Enter a movie series title:</label>
-            <input type="text" id="starwarsInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q7" class="question">
-            <p>What was the name of the boat in this movie?</p>
-            <img id="titanicImage" class="image"
-                src="https://th.bing.com/th/id/R.e2251d8e37baceed1b5c6686bbd862c6?rik=vDXQNC3bNFuSqA&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f41600000%2fTitanic-Wallpaper-titanic-41655968-1920-1080.jpg&ehk=rdujptIl4SHqYYn%2bzyFUxJG8Fb4TL%2b%2fyRjA0DC4k5y8%3d&risl=&pid=ImgRaw&r=0" alt="Image of a big boat from a movie"/>
-                <br/>
-            <label for="titanicInput">Enter the boat's name:</label>
-            <input type="text" id="titanicInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q8" class="question">
-            <p>What is this superhero's real identity?</p>
-            <img id="ironmanImage" class="image" src="https://www.hdwallpapers.in/download/iron_man_artwork_4k_3-HD.jpg" alt="Image of the actor Robert Downey Jr."><br/>
-            <label for="ironmanInput">Enter a name:</label>
-            <input type="text" id="ironmanInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q9" class="question">
-            <p>What movie series is this character from?</p>
-            <img id="sparrowImage" class="image"
-                src="https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1539262760840-0AGRG7FEKWHQR8P9K49A/image-asset.jpeg" alt="Image of Jack sparrow"/>
-                <br/>
-            <label for="sparrowInput">Enter the movies series title:</label>
-            <input type="text" id="sparrowInput" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <form id="Q10" class="question">
-            <p>What is the name of this iconic fantasy movie series?</p>
-            <img id="lordImage" class="image" src="https://th.bing.com/th/id/R.45590f01ce1e58fe5d6f988b6cdc48ab?rik=ViZrSkSBEJuIMA&riu=http%3a%2f%2fwww.slashfilm.com%2fwp%2fwp-content%2fimages%2flord-of-the-rings-tv-show.jpg&ehk=o3Xd%2bLvixC2Cm6ElDxGsC6Ef2RbLK0y%2bzy3hYOBmy2k%3d&risl=&pid=ImgRaw&r=0" alt="Image of characters from a fantasy movie"><br/>
-            <label for="lordInput">Enter a movie series  title:</label>
-            <input type="text" id="lordInput" required>
-            <button type="submit">Submit</button>
-        </form>   
-
-        <button id="nextBtn" class="btn-primary" disabled>Next</button>
-
-    </div>
-    <div id="progress-wrapper">
-        <div id="questionCounter">Question 1 of 10</div>
-        <div id="progress-bar-container">
-            <div id="progress-bar"></div>
-        </div>
-    </div> 
+  <nav><h1>Film Quiz</h1></nav>
+  <div id="quiz-container">
+    <form id="Q1" class="question active">
+      <p>What is the name of this character?</p>
+      <img class="image" src="https://getwallpapers.com/wallpaper/full/6/8/9/714289-albus-dumbledore-wallpapers-1920x1080-phone.jpg" alt="Image of a old man from the movies harrypotter"><br/>
+      <label for="harrypotterInput">Enter a character's name:</label><br/>
+      <input type="text" id="harrypotterInput" required>
+      <button type="submit">Submit</button>
+    </form>
     
-    <div id="results" style="visibility: hidden;">
-        <p id="resultsMessage"></p>
-        <button class="btn-primary" type="button" id="restart" style="display: none;">Restart</button>
-    </div>
+    <form id="Q2" class="question">
+      <p>Who directed the movie "Inception"?</p>
+      <img class="image"
+        src="https://image.tmdb.org/t/p/original/rWDkbJlIyqN8KcqXajh9sZMwGzo.jpg"
+        alt="Image of Inception"/>
+        <br/>
+      <label for="inceptionInput">Enter a director's name:</label><br/>
+      <input type="text" id="inceptionInput" required>
+      <button type="submit">Submit</button>
+    </form>
     
-    <script src="script.js"></script>
+    <form id="Q3" class="question">
+      <p>Who was the main character in the movie "The Godfather"?</p>
+      <img class="image"
+        src="https://4kwallpapers.com/images/wallpapers/the-godfather-movie-1920x1080-13940.jpg"
+        alt="Image of The Godfather"/>
+        <br/>
+      <label for="godfatherInput">Enter a characters name:</label><br/>
+      <input type="text" id="godfatherInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q4" class="question">
+      <p>What is the name of this famous animated movie?</p>
+      <img class="image" src="https://th.bing.com/th/id/R.bf49df76ec9662cc2a6aa959e7061cbe?rik=p90wzsPWkiTX5g&pid=ImgRaw&r=0" alt="Image of Nemo"><br/>
+      <label for="nemoInput">Enter a movie title:</label><br/>
+      <input type="text" id="nemoInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q5" class="question">
+      <p>Who was the actor of wonder women?</p>
+      <img class="image"
+        src="https://wallpapercave.com/wp/wp2670461.jpg" alt="Image of wonder women in red colorful smoke"/>
+        <br/>
+      <label for="wonderwomenInput">Enter an actor's name:</label><br/>
+      <input type="text" id="wonderwomenInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q6" class="question">
+      <p>What movie series is this famous spaceship from?</p>
+      <img class="image"
+        src="https://wallpaperaccess.com/full/1183714.jpg" alt="Image of a spaceship from a known movie"/>
+        <br/>
+      <label for="starwarsInput">Enter a movie series title:</label><br/>
+      <input type="text" id="starwarsInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q7" class="question">
+      <p>What was the name of the boat in this movie?</p>
+      <img class="image"
+        src="https://th.bing.com/th/id/R.e2251d8e37baceed1b5c6686bbd862c6?rik=vDXQNC3bNFuSqA&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f41600000%2fTitanic-Wallpaper-titanic-41655968-1920-1080.jpg&ehk=rdujptIl4SHqYYn%2bzyFUxJG8Fb4TL%2b%2fyRjA0DC4k5y8%3d&risl=&pid=ImgRaw&r=0" alt="Image of a big boat from a movie"/>
+        <br/>
+      <label for="titanicInput">Enter the boat's name:</label> <br/>
+      <input type="text" id="titanicInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q8" class="question">
+      <p>What is this superhero's real identity?</p>
+      <img src="https://www.hdwallpapers.in/download/iron_man_artwork_4k_3-HD.jpg" alt="Image of the actor Robert Downey Jr."><br/>
+      <label for="ironmanInput">Enter a name:</label><br/>
+      <input type="text" id="ironmanInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q9" class="question">
+      <p>What movie series is this character from?</p>
+      <img class="image"
+        src="https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1539262760840-0AGRG7FEKWHQR8P9K49A/image-asset.jpeg" alt="Image of Jack sparrow"/>
+        <br/>
+      <label for="sparrowInput">Enter the movies series title:</label><br/>
+      <input type="text" id="sparrowInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <form id="Q10" class="question">
+      <p>What is the name of this iconic fantasy movie series?</p>
+      <img class="image" src="https://th.bing.com/th/id/R.45590f01ce1e58fe5d6f988b6cdc48ab?rik=ViZrSkSBEJuIMA&riu=http%3a%2f%2fwww.slashfilm.com%2fwp%2fwp-content%2fimages%2flord-of-the-rings-tv-show.jpg&ehk=o3Xd%2bLvixC2Cm6ElDxGsC6Ef2RbLK0y%2bzy3hYOBmy2k%3d&risl=&pid=ImgRaw&r=0" alt="Image of characters from a fantasy movie"><br/>
+      <label for="lordInput">Enter a movie series title:</label><br/>
+      <input type="text" id="lordInput" required>
+      <button type="submit">Submit</button>
+    </form>  
+
+    <button id="nextBtn" class="btn-primary" disabled>Next</button>
+
+  </div>
+  <div id="progress-wrapper">
+    <div id="questionCounter">Question 1 of 10</div>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div> 
+  
+  <div id="results" style="visibility: hidden;">
+    <p id="resultsMessage"></p>
+    <button class="btn-primary" type="button" id="restart" style="display: none;">Restart</button>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
