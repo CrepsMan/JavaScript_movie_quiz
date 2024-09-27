@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultsDiv = document.getElementById("results");
     const restartBtn = document.getElementById("restart");
     const resultsMessage = document.getElementById("resultsMessage");
+    const answarCounter = document.getElementById("answarCounter");
 
     // Hide restart button initially
     restartBtn.style.display = "none";
@@ -51,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 updateProgressBar(false);
             }
+
+            // Update the answarCounter
+            answarCounter.textContent = `${score} correct out of ${totalQuestions} Questions`;
 
             nextBtn.disabled = false;
             nextBtn.focus();
@@ -117,6 +121,41 @@ document.addEventListener('DOMContentLoaded', function () {
         questions[0].classList.add("active");
         questionCounter.textContent = `Question 1 of ${totalQuestions}`;
         nextBtn.disabled = true;
+
+        // Reset the answarCounter
+        answarCounter.textContent = `0 correct out of ${totalQuestions} Questions`;
+    }
+});
+
+
+    function showResults() {
+        resultsText.textContent = `You got ${score} out of ${totalQuestions} correct!`;
+        resultsDiv.style.visibility = 'visible';
+        restartButton.style.display = 'block';
+        quizContainer.style.display = 'none';
+        progressText.style.display = 'none';
+        feedbackMessage.textContent = '';
     }
     
-});
+
+    function restartQuiz() {
+        score = 0;
+        currentQuestionIndex = 0;
+        updateProgress();
+        resultsText.textContent = '';
+        form.style.display = 'block';
+        restartButton.style.display = 'none';
+        questions.forEach((question) => question.classList.remove('active'));
+        questions[0].classList.add('active');
+        resultsDiv.style.visibility = 'hidden';
+        progressText.style.display = 'block';
+        feedbackMessage.textContent = '';
+    }
+
+    function showTemporaryMessage(element, message) {
+        element.textContent = message;
+        element.style.display = "block";
+        setTimeout(() => {
+            element.style.display = "none";
+        }, 2000);
+    }
