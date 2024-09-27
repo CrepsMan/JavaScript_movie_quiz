@@ -18,7 +18,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
@@ -126,7 +126,8 @@ button {
 #questionCounter {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #555;
+    color: black;
+    font-size: xx-large;
 }
 
 
@@ -142,12 +143,14 @@ button[disabled] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: xx-large;
 }
 
 #resultsMessage {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: black;
+    font-size: xx-large;
 }
 
 #restart {
@@ -180,6 +183,7 @@ form {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
+    font-size: xx-large;
 }
 
 input[type="text"] {
@@ -193,6 +197,7 @@ input[type="text"] {
     margin-bottom: 20px;
     box-sizing: border-box;
     border:black 1px solid;
+    
 }
 
 button[type="submit"] {
@@ -215,4 +220,9 @@ button[type="submit"]:hover {
 label {
     font-size: 1.5rem;
     margin-bottom: 5px;
+}
+
+#answarCounter {
+    color: black;
+    font-size: xx-large;
 }
